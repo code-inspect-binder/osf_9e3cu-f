@@ -1,0 +1,122 @@
+﻿Single session R workshop outline
+This outline covers teaching R to first-time or newer users in a single ~ 3-hour session. While the schedule is aspirational, it covers the basics and engages the audience with a number of topics.
+
+
+Prep:
+-- Doc to share with code and explainers
+-- Identify gene to work with and have code ready as an example
+-- Resources doc for students at end
+-- webpages to show in intro
+
+
+Learning Objectives
+-- Students will be familiar with R programming language and be able to describe the possible uses and applications
+-- Students will know the general format for writing scripts in R 
+including 
+--  # notation to annotate their code
+-- library command to load packages
+-- vectors and data frames as data structures
+-- how to run their code in Rstudio
+-- Students will understand the concept of tidy data 
+-- Students will be familiar with the uses of the tidyverse of R packages for wrangling, summarizing, and plotting data
+-- Students be able to find information on a protein in Uniprot/Ensembl/GnomAD
+
+
+________________
+
+
+PART 1 ~ aim for 9:50 to finish
+1. I am not a programmer or a computer type
+   1. Bench biochemist
+   2. Picked up computer work to help me answer questions
+   3. I had to want to learn it → found resources to help
+   4. STILL LEARNING; still use google a lot
+2. Why R?
+   1. Excel and Sheets are functional (or are they?)
+   2. Ex: Apps; presentations; websites; stats; webscraping; 
+      1. Gen chem lab → stats and distribution
+      2. Web apps
+   3. Good community; lots of free resources to learn
+   4. Tidyverse
+3. R and Rstudio
+   1. Rstudio is a wrapper for R; makes things easier to use
+   2. The four boxes
+      1. Code
+      2. files/plots/data/help/packages
+      3. Runtime
+      4. Environment
+   3. Bring in the tidyverse of packages
+      1. Install.package OR in R studio use the packages window
+4. Open a new script window
+   1. library(tidyverse)
+      1. What does this do or mean?
+      2. Use the # to write notes to yourself
+   2. Need data, so let’s make a data frame
+      1. Names, home state, miles/kilometers from home
+      2. Assign arrow <-
+      3. Use the # to tell what you are making
+      4. Make data frame of class data from Google Form
+   3. Looks like a spreadsheet!
+--- CHECK TIME IF TIME BELOW
+5. Accessing a single row
+   1. Average, std of miles from home
+6. Filter data
+   1. Remember the #
+   2. != VA
+   3. Miles < 20
+
+
+________________
+
+
+PART II aim for 10:50 finish
+1. Let’s play with some data and see if we can learn something
+2. Accessing data that is a bit bigger
+   1. Use CSV files! (Or Google Sheets)
+3. Looking at GnomAD/Ensembl/Uniprot
+   1. What can we learn?
+   2. Conservation of regions
+   3. Disease regions
+   4. Alternative splicing
+   5. Sites of SNPs
+4. CRX (?)
+   1. Cone Rod Homeobox
+   2. TS Factor
+   3. Linked to the formation of rods and cone cells
+   4. No structure, little biochemistry
+   5. Where are the mutation sides in CRX?  And where are the human diversity sites?
+5. Let’s look at the data
+   1. That’s a lot of data to sort through….
+   2. We can download and import into R
+   3. Import using readr (put into the script)
+   4. How do we start….?
+      1. Discuss and make a plan to make a plot like BST2 example from Roy, Sutton, and Berndsen, 2019
+         1. What do we need the data to look like?
+      2. Search for commands in tidyverse that could help (focus in dplyr, tidyr, and stringr)
+         1. Assign one person or team to explain a command
+            1. Separate
+            2. Extract
+            3. Unite
+            4. Mutate
+            5. Filter
+            6. Select
+            7. Summarise
+            8. Arrange
+            9. String split
+            10. What is tidy data?
+CHECK FOR TIME!!!
+
+
+6. Try building the code
+   1. Use a pipe %>%
+7. My plan
+   1. Filter for synonymous and missense into separate dfs
+
+
+________________
+
+
+PART III aim for 11:50
+1. Discuss plans if not already done
+2. Starting building the code
+3. Start building the plot
